@@ -28,7 +28,7 @@ public class laser : MonoBehaviour
 	void DrawLaser()
 	{
 		int laserReflected = 1;
-		int vertexCounter = 1;
+		int vertexCounter = 1;								
 		bool loopActive = true;
 		Vector2 laserDirection = transform.up;
 		Vector2 lastLaserPosition = transform.position;
