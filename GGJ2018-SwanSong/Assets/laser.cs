@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class laser : MonoBehaviour 
 {
-	private LineRenderer lineRenderer;
+	private LineRenderer mlineRenderer;
 	public Transform laserHit;
 
 	// Use this for initialization
 	void Start () 
 	{
-		lineRenderer = GetComponent<LineRenderer> ();
-		lineRenderer.enabled = false;
-		lineRenderer.useWorldSpace = true;
+		mlineRenderer = GetComponent<LineRenderer> ();
+		mlineRenderer.enabled = false;
+		mlineRenderer.useWorldSpace = true;
 	}
 
 	// Update is called once per frame
@@ -21,12 +21,12 @@ public class laser : MonoBehaviour
 		Debug.DrawLine (transform.position, hit.point);
 		laserHit.position = hit.point;
 
-		lineRenderer.SetPosition (0, transform.position);
-		lineRenderer.SetPosition (1, laserHit.position);
+		mlineRenderer.SetPosition (0, transform.position);
+		mlineRenderer.SetPosition (1, laserHit.position);
 		if (Input.GetKey (KeyCode.Space)) {
-			lineRenderer.enabled = true;
+			mlineRenderer.enabled = true;
 		} else {
-			lineRenderer.enabled = false;
+			mlineRenderer.enabled = false;
 		}
 
 	
