@@ -10,7 +10,7 @@ public class Test2 : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		isActive = true;
+		isActive = false;
 	}
 	
 	// Update is called once per frame
@@ -21,5 +21,19 @@ public class Test2 : MonoBehaviour
 			Instantiate (wave, transform.position, transform.rotation);
 			isActive = false;
 		}
+	}
+
+	void OnMouseOver()
+	{
+		if (Input.GetMouseButton(0))
+		{
+			transform.Rotate(Vector3.forward, 5.0f);
+		}
+
+		if (Input.GetMouseButton(1))
+		{
+			transform.Rotate(Vector3.forward, -5.0f);
+		}
+
 	}
 }
