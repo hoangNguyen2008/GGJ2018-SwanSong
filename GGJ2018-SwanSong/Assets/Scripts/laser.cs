@@ -43,11 +43,11 @@ public class laser : MonoBehaviour
 			if (hit) 
 			{
 				laserReflected++;
-				vertexCounter += 3;
+				vertexCounter += 1;
 				mlineRenderer.positionCount = vertexCounter;
-				mlineRenderer.SetPosition(vertexCounter - 3, Vector2.MoveTowards(hit.point, lastLaserPosition, 0.01f));
-				mlineRenderer.SetPosition(vertexCounter - 2, hit.point);
-				mlineRenderer.SetPosition(vertexCounter - 1, hit.point);
+				mlineRenderer.SetPosition(vertexCounter - 1, Vector2.MoveTowards(hit.point, lastLaserPosition, 0.01f));
+				//mlineRenderer.SetPosition(vertexCounter - 2, hit.point);
+				//mlineRenderer.SetPosition(vertexCounter - 1, hit.point);
 				lastLaserPosition = hit.point;
 				laserDirection = Vector2.Reflect(laserDirection, hit.normal);
 			}

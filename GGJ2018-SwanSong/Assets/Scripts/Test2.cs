@@ -27,12 +27,12 @@ public class Test2 : MonoBehaviour
 	{
 		if (Input.GetMouseButton(0))
 		{
-			transform.Rotate(Vector3.forward, 5.0f);
+			transform.Rotate(Vector3.forward, 2.5f);
 		}
 
 		if (Input.GetMouseButton(1))
 		{
-			transform.Rotate(Vector3.forward, -5.0f);
+			transform.Rotate(Vector3.forward, -2.5f);
 		}
 
 	}
