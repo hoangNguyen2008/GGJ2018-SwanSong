@@ -28,7 +28,5 @@ public class laser : MonoBehaviour
 		} else {
 			mlineRenderer.enabled = false;
 		}
-
-	
 	}
 }
