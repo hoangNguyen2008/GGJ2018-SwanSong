@@ -122,15 +122,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.32
+      value: 6.33
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.03
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -59.58774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -161,6 +161,11 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 1.0330648
+      objectReference: {fileID: 0}
+    - target: {fileID: 212124561510836000, guid: cedd8c0bd37fe48f386ff3f25cd745e0,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
@@ -286,15 +291,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.31
+      value: -9.52
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.65
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -59.58774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -365,7 +370,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1379402848}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -771,15 +776,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.08
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.17
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -59.58774
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -872,7 +877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1912452865
 SpriteRenderer:
   m_ObjectHideFlags: 0

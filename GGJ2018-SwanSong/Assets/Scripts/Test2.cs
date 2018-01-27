@@ -22,4 +22,18 @@ public class Test2 : MonoBehaviour
 			isActive = false;
 		}
 	}
+
+	void OnMouseOver()
+	{
+		if (Input.GetMouseButton(0))
+		{
+			transform.Rotate(Vector3.forward, 5.0f);
+		}
+
+		if (Input.GetMouseButton(1))
+		{
+			transform.Rotate(Vector3.forward, -5.0f);
+		}
+
+	}
 }
