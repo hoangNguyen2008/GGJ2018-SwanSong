@@ -10,7 +10,7 @@ public class Test2 : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		isActive = true;
+		isActive = false;
 	}
 	
 	// Update is called once per frame
