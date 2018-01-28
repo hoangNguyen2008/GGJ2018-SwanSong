@@ -41,6 +41,7 @@ public class laser : MonoBehaviour
 
 			if (hit) 
 			{
+				
 				laserReflected++;
 				vertexCounter += 1;
 				mlineRenderer.positionCount = vertexCounter;
