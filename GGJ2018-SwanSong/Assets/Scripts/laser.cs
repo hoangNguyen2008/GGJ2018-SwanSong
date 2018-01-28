@@ -37,7 +37,7 @@ public class laser : MonoBehaviour
 
 		while (loopActive) 
 		{
-			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 4);
+			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 5);
 
 			if (hit) 
 			{
@@ -81,12 +81,12 @@ public class laser : MonoBehaviour
 				laserReflected++;
 				vertexCounter++;
 				mlineRenderer.positionCount = vertexCounter;
-				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 4);
+				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 5);
 
 				loopActive = false;
 			}
 
-			if (laserReflected > 2) 
+			if (laserReflected > 10) 
 			{
 				loopActive = false;
 			}

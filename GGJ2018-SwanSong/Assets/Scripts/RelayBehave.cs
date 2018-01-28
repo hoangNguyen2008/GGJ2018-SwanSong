@@ -10,7 +10,7 @@ public class RelayBehave : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		isActive = false;
+		//isActive = false;
 		lifetime = 0.0f;
 	}
 	
@@ -55,12 +55,12 @@ public class RelayBehave : MonoBehaviour
 		{
 			if (Input.GetMouseButton(0))
 			{
-				transform.Rotate(Vector3.forward, 2.5f);
+				transform.Rotate(Vector3.forward, 1.5f);
 			}
 
 			if (Input.GetMouseButton(1))
 			{
-				transform.Rotate(Vector3.forward, -2.5f);
+				transform.Rotate(Vector3.forward, -1.5f);
 			}
 		}
 	}

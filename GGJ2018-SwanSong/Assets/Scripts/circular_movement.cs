@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class circular_movement : MonoBehaviour  {
+public class circular_movement : MonoBehaviour  
+{
 
 	float timeCounter = 20;
 
@@ -10,11 +11,12 @@ public class circular_movement : MonoBehaviour  {
 	void Start() {
 	}
 
-	void Update () {
+	void Update () 
+	{
 		timeCounter += Time.deltaTime;
 
-		float x = Mathf.Cos(timeCounter) * 10;
-		float y = Mathf.Sin(timeCounter) * 5;
+		float x = Mathf.Cos(timeCounter) * 8;
+		float y = Mathf.Sin(timeCounter) * 3;
 		float z = 0;
 
 		transform.position = new Vector3 (x, y, z);

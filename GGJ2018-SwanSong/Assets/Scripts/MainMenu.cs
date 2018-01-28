@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 	// Use this for initialization
 	public void PlayGame () 
 	{
-		SceneManager.LoadScene ("Level01");
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
 	// Update is called once per frame

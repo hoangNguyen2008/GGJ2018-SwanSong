@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillSwitch : MonoBehaviour 
 {
@@ -14,7 +15,7 @@ public class KillSwitch : MonoBehaviour
 		{
 			if(gameObject.name == "Beam(Clone)")
 			{
-				Application.LoadLevel("Menu");
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 			}
 
 			Destroy(gameObject);
