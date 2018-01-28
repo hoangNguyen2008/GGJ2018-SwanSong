@@ -11,7 +11,7 @@ public class RelayBehave : MonoBehaviour
 	void Start () 
 	{
 		isActive = false;
-		lifetime = 3.0f;
+		lifetime = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,16 @@ public class RelayBehave : MonoBehaviour
 		{
 			lifetime -= Time.deltaTime;
 
-			if (lifetime < 0)
+			if (lifetime >= 3.0f)
+			{
+				laser temp2 = gameObject.GetComponentInChildren<laser> ();
+				if(temp2 != null)
+				{
+					//temp2.mlineRenderer.isVisible = false;
+				}
+			}
+
+			if (lifetime <= 0)
 			{
 				laser temp = gameObject.GetComponentInChildren<laser>();
 				if (temp != null)

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 120822373888264836}
   - component: {fileID: 114174126239472834}
   m_Layer: 0
-  m_Name: spawn
+  m_Name: spawn_beam
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -37,11 +37,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4671185301699220}
   - component: {fileID: 212848872537316998}
-  - component: {fileID: 61913293059906236}
   - component: {fileID: 114995332364279872}
+  - component: {fileID: 50639397820732786}
+  - component: {fileID: 58733937818286266}
   m_Layer: 0
   m_Name: Relay
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371614031987794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.47, y: -1.53, z: 0}
+  m_LocalPosition: {x: -6.8, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4915425967446364}
@@ -67,14 +68,34 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150698347978786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4671185301699220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61913293059906236
-BoxCollider2D:
+--- !u!50 &50639397820732786
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1371614031987794}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58733937818286266
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -82,22 +103,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 0.75, y: 0.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.25}
-  m_EdgeRadius: 0
+  m_Radius: 0.75
 --- !u!114 &114174126239472834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036eb4bdb57424639b2391830418c27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mlineRenderer: {fileID: 0}
   laserHit: {fileID: 0}
 --- !u!114 &114995332364279872
 MonoBehaviour:
@@ -121,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca105e29dcfddc4ca21270c610a9ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 1411655783303282, guid: 2e7b6a729e2b55a4ebd3b08dc65a084c, type: 2}
+  isActive: 0
 --- !u!120 &120822373888264836
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -136,7 +148,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aba6c18396b0bf54f97f6fb73a57776c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +173,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -206,7 +218,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0

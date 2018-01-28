@@ -37,7 +37,7 @@ public class laser : MonoBehaviour
 
 		while (loopActive) 
 		{
-			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 3);
+			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 4);
 
 			if (hit) 
 			{
@@ -52,10 +52,16 @@ public class laser : MonoBehaviour
 				laserDirection = Vector2.Reflect(laserDirection, hit.normal);
 
 				GameObject temp = hit.collider.gameObject;
-				PlanetBehave toggleActive = temp.GetComponent<PlanetBehave>();
-				if (toggleActive != null)
+				PlanetBehave makeActive = temp.GetComponent<PlanetBehave>();
+				if (makeActive != null)
 				{
-					toggleActive.isActive = true;
+					makeActive.isActive = true;
+				}
+
+				RelayBehave makeActive2 = temp.GetComponent<RelayBehave>();
+				if (makeActive2 != null)
+				{
+					makeActive2.isActive = true;
 				}
 			}
 			else 
@@ -63,7 +69,7 @@ public class laser : MonoBehaviour
 				laserReflected++;
 				vertexCounter++;
 				mlineRenderer.positionCount = vertexCounter;
-				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 3);
+				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 4);
 
 				loopActive = false;
 			}

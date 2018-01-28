@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class KillSwitch : MonoBehaviour 
 {
-	private float lifetime;
-
-
-	// Use this for initialization
-	void Start () 
-	{
-		lifetime = 0.6f;
-	}
+	public float lifetime;
 	
 	// Update is called once per frame
 	void Update () 

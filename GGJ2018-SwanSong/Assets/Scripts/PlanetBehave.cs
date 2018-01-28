@@ -12,7 +12,7 @@ public class PlanetBehave : MonoBehaviour
 	void Start () 
 	{
 		//isActive = false;
-		lifetime = 6.0f;
+		lifetime = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class PlanetBehave : MonoBehaviour
 			if(lifetime < 0)
 			{
 				Instantiate(pulse, transform.position, transform.rotation);
-				lifetime = 6.0f;
+				lifetime = 4.0f;
 			}
 		}
 	}
