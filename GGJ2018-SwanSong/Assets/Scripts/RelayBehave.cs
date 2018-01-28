@@ -17,14 +17,16 @@ public class RelayBehave : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (isActive) 
+		if (isActive)
 		{
+			gameObject.GetComponent<SpriteRenderer> ().color = new Color (1.0f, 1.0f, 1.0f, 1.0f);
+
 			lifetime -= Time.deltaTime;
 
 			if (lifetime >= 3.0f)
 			{
 				laser temp2 = gameObject.GetComponentInChildren<laser> ();
-				if(temp2 != null)
+				if (temp2 != null)
 				{
 					//temp2.mlineRenderer.isVisible = false;
 				}
@@ -32,7 +34,7 @@ public class RelayBehave : MonoBehaviour
 
 			if (lifetime <= 0)
 			{
-				laser temp = gameObject.GetComponentInChildren<laser>();
+				laser temp = gameObject.GetComponentInChildren<laser> ();
 				if (temp != null)
 				{
 					temp.mlineRenderer.enabled = true;
@@ -40,24 +42,37 @@ public class RelayBehave : MonoBehaviour
 
 				lifetime = 3.0f;
 			}
+		} 
+		else
+		{
+			gameObject.GetComponent<SpriteRenderer> ().color = new Color (0.5f, 0.5f, 0.5f, 1.0f);
 		}
 	}
 
 	void OnMouseOver()
 	{
-		if (Input.GetMouseButton(0))
+		if (isActive)
 		{
-			transform.Rotate(Vector3.forward, 2.5f);
-		}
+			if (Input.GetMouseButton(0))
+			{
+				transform.Rotate(Vector3.forward, 2.5f);
+			}
 
-		if (Input.GetMouseButton(1))
-		{
-			transform.Rotate(Vector3.forward, -2.5f);
+			if (Input.GetMouseButton(1))
+			{
+				transform.Rotate(Vector3.forward, -2.5f);
+			}
 		}
 	}
 
 	void OnTriggerEnter2D()
 	{
+		if (!isActive)
+		{
+			AudioSource woosh = GetComponent<AudioSource> ();
+			woosh.Play ();
+		}
+
 		isActive = true;
 	}
 }

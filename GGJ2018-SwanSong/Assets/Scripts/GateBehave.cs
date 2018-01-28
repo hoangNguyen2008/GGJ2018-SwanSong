@@ -20,6 +20,8 @@ public class GateBehave : MonoBehaviour
 		{
 			Vector3 d00t = new Vector3 (0.0f, 3.0f, 0.0f);
 			Instantiate(beam, transform.position + d00t, transform.rotation);
+			AudioSource blorf = GetComponent<AudioSource> ();
+			blorf.Play ();
 			isActive = false;
 		}
 	}

@@ -55,13 +55,25 @@ public class laser : MonoBehaviour
 				PlanetBehave makeActive = temp.GetComponent<PlanetBehave>();
 				if (makeActive != null)
 				{
-					makeActive.isActive = true;
+					if(!makeActive.isActive)
+					{
+						makeActive.isActive = true;
+
+						AudioSource boosh = temp.GetComponent<AudioSource> ();
+						boosh.clip = makeActive.whenWoken;
+						boosh.Play ();
+					}
 				}
 
 				RelayBehave makeActive2 = temp.GetComponent<RelayBehave>();
 				if (makeActive2 != null)
 				{
-					makeActive2.isActive = true;
+					if(!makeActive2.isActive)
+					{
+						makeActive2.isActive = true;
+						AudioSource woosh = temp.GetComponent<AudioSource> ();
+						woosh.Play ();
+					}
 				}
 			}
 			else 
