@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 212124561510836000}
   - component: {fileID: 114619875522759706}
   m_Layer: 0
-  m_Name: Planet
+  m_Name: planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulse: {fileID: 1234998250915136, guid: 6fa081fc4b3ccdd41a042fdf1fcc5fed, type: 2}
-  isActive: 1
+  isActive: 0
 --- !u!212 &212124561510836000
 SpriteRenderer:
   m_ObjectHideFlags: 1
