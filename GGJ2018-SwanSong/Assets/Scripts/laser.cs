@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class laser : MonoBehaviour 
 {
-	private LineRenderer mlineRenderer;
+	public LineRenderer mlineRenderer;
 	public Transform laserHit;
 
 	// Use this for initialization
@@ -18,14 +18,13 @@ public class laser : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		mlineRenderer.enabled = Input.GetKey (KeyCode.Space);
-		if (Input.GetKey (KeyCode.Space)||Input.GetKeyUp(KeyCode.Space)) 
+		if(mlineRenderer.enabled)
 		{
-			DrawLaser ();
+				DrawLaser ();
 		}
 	}
 
-	void DrawLaser()
+	public void DrawLaser()
 	{
 		int laserReflected = 1;
 		int vertexCounter = 1;								
@@ -38,7 +37,7 @@ public class laser : MonoBehaviour
 
 		while (loopActive) 
 		{
-			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 100);
+			RaycastHit2D hit = Physics2D.Raycast (lastLaserPosition, laserDirection, 3);
 
 			if (hit) 
 			{
@@ -50,18 +49,25 @@ public class laser : MonoBehaviour
 				//mlineRenderer.SetPosition(vertexCounter - 1, hit.point);
 				lastLaserPosition = hit.point;
 				laserDirection = Vector2.Reflect(laserDirection, hit.normal);
+
+				GameObject temp = hit.collider.gameObject;
+				PlanetBehave toggleActive = temp.GetComponent<PlanetBehave>();
+				if (toggleActive != null)
+				{
+					toggleActive.isActive = true;
+				}
 			}
 			else 
 			{
 				laserReflected++;
 				vertexCounter++;
 				mlineRenderer.positionCount = vertexCounter;
-				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 100);
+				mlineRenderer.SetPosition(vertexCounter - 1, lastLaserPosition + laserDirection.normalized * 3);
 
 				loopActive = false;
 			}
 
-			if (laserReflected > 10) 
+			if (laserReflected > 2) 
 			{
 				loopActive = false;
 			}

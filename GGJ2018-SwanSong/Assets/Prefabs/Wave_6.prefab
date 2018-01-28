@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4689471017676514}
   - component: {fileID: 212023320256367530}
   - component: {fileID: 95999658193301230}
+  - component: {fileID: 114197359490238416}
   m_Layer: 0
   m_Name: Wave_6
   m_TagString: Untagged
@@ -58,6 +59,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114197359490238416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411655783303282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121eb9de37e2f2649886d0290fbb6512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212023320256367530
 SpriteRenderer:
   m_ObjectHideFlags: 1

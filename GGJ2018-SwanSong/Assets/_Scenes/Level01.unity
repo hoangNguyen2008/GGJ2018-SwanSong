@@ -152,67 +152,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 58524576062231544, guid: cedd8c0bd37fe48f386ff3f25cd745e0,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.09919357
-      objectReference: {fileID: 0}
-    - target: {fileID: 58524576062231544, guid: cedd8c0bd37fe48f386ff3f25cd745e0,
-        type: 2}
-      propertyPath: m_Radius
-      value: 1.0330648
-      objectReference: {fileID: 0}
-    - target: {fileID: 212124561510836000, guid: cedd8c0bd37fe48f386ff3f25cd745e0,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &703298716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 703298717}
-  - component: {fileID: 703298718}
-  m_Layer: 0
-  m_Name: spawn_pulse
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &703298717
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 703298716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1450093437}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &703298718
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 703298716}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: dcc77925f2d7ce5468f75fd927e8e4d1, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &852289114
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,11 +355,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!4 &1450093437 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4084216957251316, guid: cedd8c0bd37fe48f386ff3f25cd745e0,
-    type: 2}
-  m_PrefabInternal: {fileID: 80055892}
 --- !u!1 &1489525252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1028,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: d501798a7d2f2e14ea7a82b50a7e5d70,
         type: 3}
+    - target: {fileID: 4115052349010346, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cedd8c0bd37fe48f386ff3f25cd745e0, type: 2}
   m_IsPrefabParent: 0
