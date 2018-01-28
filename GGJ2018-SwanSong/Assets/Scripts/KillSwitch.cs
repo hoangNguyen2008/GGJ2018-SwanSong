@@ -12,6 +12,11 @@ public class KillSwitch : MonoBehaviour
 		lifetime -= Time.deltaTime;
 		if (lifetime < 0)
 		{
+			if(gameObject.name == "Beam(Clone)")
+			{
+				Application.LoadLevel("Menu");
+			}
+
 			Destroy(gameObject);
 		}
 	}

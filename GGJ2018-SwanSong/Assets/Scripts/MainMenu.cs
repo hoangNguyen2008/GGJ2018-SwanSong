@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour 
+{
 
 	// Use this for initialization
-	public void PlayGame () {
-		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+	public void PlayGame () 
+	{
+		SceneManager.LoadScene ("Level01");
 	}
 
 	// Update is called once per frame
-	public void QuitGame () {
+	public void QuitGame () 
+	{
 		Application.Quit();
 	}
 }
